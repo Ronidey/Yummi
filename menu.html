@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | Yummy</title>
+  <title>Menu | Yummy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -33,73 +34,71 @@
     </div>
   </header>
 
-  <!------------ HERO ------------->
-  <section class="hero text-center">
-    <div class="hero__text">
-      <h1 class="hero__title">Grandma’s Yummy Cupcakes</h1>
-      <p class="hero__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra penatibus consectetur
-        faucibus hendrerit elit
-        dui</p>
-    </div>
+  <!-- Main -->
+  <main>
+    <section class="menu-section">
+      <header class="text-center menu-section__header">
+        <h2>Menu</h2>
+      </header>
+      <img class="cupcake-shadow" src="/images/cupcake-shadow.svg" alt="">
 
-    <div class="hero__img">
-      <img src="/images/hero-img.png" alt="">
-      <div class="tag"></div>
-    </div>
-  </section>
+      <div class="container">
+        <div class="menu-wrapper">
+          <!----------- MENU 1 ----------->
+          <div class="menu">
+            <header class="menu__header">
+              <h3>Our Specility</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique vitae sit fermentum amet mauris. In
+                hendrerit in iaculis eget tortor scelerisque.</p>
+            </header>
 
-  <!------------ PRODUCTS INTRO ------------->
-  <section class="products-intro">
-    <div class="container">
-      <div class="products-intro__container">
-        <div class="products-intro__text">
-          <h2 class="products-intro__heading">Delicious Cupcakes Made By Grandma</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit eget vel ultricies velit. Tristique
-            tempus pellentesque malesuada et et ac vel, arcu elementum. Lorem ipsum dolor sit amet, consectetur
-            adipiscing
-            elit.</p>
-          <button class="products-intro__btn">View</button>
+            <div class="menu__items">
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-1.png" alt="">
+                <p>Little Snow</p>
+              </div>
+
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-2.png" alt="">
+                <p>Chocopie</p>
+              </div>
+
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-3.png" alt="">
+                <p>Mangopie</p>
+              </div>
+            </div>
+          </div>
+
+          <!----------- MENU 2 ----------->
+          <div class="menu">
+            <header class="menu__header">
+              <h3>Must Try</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique vitae sit fermentum amet mauris. In
+                hendrerit in iaculis eget tortor scelerisque.</p>
+            </header>
+
+            <div class="menu__items">
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-3.png" alt="">
+                <p>Mangopie</p>
+              </div>
+
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-1.png" alt="">
+                <p>Little Snow</p>
+              </div>
+
+              <div class="menu__item text-center">
+                <img src="/images/menu/item-2.png" alt="">
+                <p>Chocopie</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <img src="/images/chocolate-cupcake.png" alt="">
       </div>
-    </div>
-  </section>
-
-  <!------------ BOTTOM NAV ------------->
-  <nav class="bottom-nav">
-    <div class="container">
-      <div class="bottom-nav__container">
-        <a href="#" class="bottom-nav__group">
-          <svg class="svg-icon">
-            <use href="/images/sprites.svg#cupcake"></use>
-          </svg>
-          <span>Menu</span>
-        </a>
-
-        <a href="#" class="bottom-nav__group">
-          <svg class="svg-icon">
-            <use href="/images/sprites.svg#heart-message"></use>
-          </svg>
-          <span>Our Story</span>
-        </a>
-
-        <a href="#" class="bottom-nav__group">
-          <svg class="svg-icon">
-            <use href="/images/sprites.svg#blog"></use>
-          </svg>
-          <span>Blogs</span>
-        </a>
-
-        <a href="#" class="bottom-nav__group">
-          <svg class="svg-icon">
-            <use href="/images/sprites.svg#location"></use>
-          </svg>
-          <span>Location</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+    </section>
+  </main>
 
   <!---------- FOOTER ----------------->
   <footer class="footer">
