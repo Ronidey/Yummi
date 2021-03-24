@@ -7,6 +7,7 @@ html {
   --clr-primary: #7c5b53;
   --clr-primary-dark: #54423d;
   --clr-gray: #818181;
+  --clr-yellow: #f6e53a;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Magra', sans-serif;
 }
@@ -20,6 +21,7 @@ body {
 
 body {
   line-height: 1.45;
+  font-family: 'Roboto', sans-serif;
   font-family: var(--ff-primary);
 }
 
@@ -29,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Magra', sans-serif;
   font-family: var(--ff-secondary);
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -90,23 +93,26 @@ p {
 .svg-icon {
   width: 1em;
   height: 1em;
+  font-size: 1.5em;
 }
 
 /* ------------- HEADER ------------------ */
 .header__top {
+  background: #54423d;
   background: var(--clr-primary-dark);
   padding: 1rem;
 }
 
 .header__bottom {
   padding: 1.5rem 0;
+  background: #7c5b53;
   background: var(--clr-primary);
   color: #fff;
 }
 
 /* ---------------- HERO ------------------ */
 .hero {
-  padding: 6rem 0;
+  padding: 6rem 1.5rem;
 }
 
 .hero__text {
@@ -117,11 +123,13 @@ p {
 .hero__title {
   font-size: 3rem;
   font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #7c5b53;
   color: var(--clr-primary);
   margin-bottom: 1rem;
 }
 
 .hero__para {
+  color: #818181;
   color: var(--clr-gray);
 }
 
@@ -133,8 +141,10 @@ p {
 .hero .tag::before,
 .hero .tag::after {
   content: '';
-  width: 150px;
-  height: 150px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 50%;
   position: absolute;
   bottom: 0;
@@ -144,14 +154,17 @@ p {
 
 .hero .tag::before {
   background: #f6e53a;
+  background: var(--clr-yellow);
   transform: translate(-28%, 18px);
 }
 
 .hero .tag::after {
   content: '15% OFF';
-  text-align: center;
-  line-height: 150px;
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.45rem;
+  font-size: clamp(1rem, 3vw, 1.75rem);
   font-weight: 600;
   background: rgba(244, 55, 89, 0.9);
   color: #fff;
@@ -159,6 +172,7 @@ p {
 
 /* ------------ Products Intro -------------- */
 .products-intro {
+  background: #7c5b53;
   background: var(--clr-primary);
   color: #fff;
   padding: 3rem 0;
@@ -193,6 +207,7 @@ p {
   width: 125px;
   text-transform: uppercase;
   font-weight: 600;
+  color: #7c5b53;
   color: var(--clr-primary);
   background: #fff;
   border: none;
@@ -227,6 +242,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 4rem 0;
+  color: #54423d;
   color: var(--clr-primary-dark);
 }
 
@@ -238,6 +254,12 @@ p {
   padding: 0.5rem;
   width: 100%;
   margin-bottom: 1rem;
+  transition: transform 250ms ease;
+}
+
+.bottom-nav__group:focus,
+.bottom-nav__group:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 600px) {
@@ -256,4 +278,36 @@ p {
   font-size: 1.15rem;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+/* ------------ FOOTER ---------- */
+.footer {
+  background: #f6e53a;
+  background: var(--clr-yellow);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.follow-us {
+  margin-bottom: 1rem;
+}
+
+.follow-us__box {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.15rem;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  transition: transform 150ms ease;
+}
+
+.follow-us__box:hover,
+.follow-us__box:focus {
+  transform: scale(1.1);
 }
