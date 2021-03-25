@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* ------------ DRY Styling ------------- */
 .menu-section,
 .our-story {
@@ -22,6 +29,8 @@
   position: absolute;
   top: 3rem;
   left: -3rem;
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
   transform: rotate(130deg);
   z-index: -1;
 }
@@ -40,7 +49,12 @@
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -50,7 +64,12 @@
 
 @media screen and (min-width: 900px) {
   .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -60,6 +79,8 @@
 
   .menu__header,
   .menu__items {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
   }
 }
@@ -75,7 +96,10 @@
 }
 
 .menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -85,12 +109,17 @@
 
 .menu__item img {
   max-width: 150px;
+  max-height: 190px;
 }
 
 @media screen and (min-width: 700px) {
   .menu__items {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
-    align-items: center;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 
@@ -109,6 +138,8 @@
   right: -3rem;
   left: initial;
   top: initial;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -119,6 +150,7 @@
     fixed;
   position: relative;
   background-blend-mode: hard-light;
+  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -157,6 +189,8 @@
 
 @media screen and (min-width: 992px) {
   .our-story__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
